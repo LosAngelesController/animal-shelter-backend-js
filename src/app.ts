@@ -9,8 +9,11 @@ import schema from './schema.json';
 
 import {pgclient} from './postgres'
 
+var compression = require('express-compression')
+
 const app = express();
 app.use(cors());
+app.use(compression());
 
 //connect postgress client
 async function main() {
