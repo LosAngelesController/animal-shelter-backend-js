@@ -1,0 +1,27 @@
+{
+  "name": "animal-shelter-backend-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "cloudrunhttp": "node ./dist/app.js --port 8080 --nossl",
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/luxon": "^3.2.0",
+    "compression": "^1.7.4",
+    "express": "^4.18.2",
+    "luxon": "^3.2.1",
+    "optimist": "^0.6.1",
+    "pg": "^8.8.0",
+    "server-timing": "^3.3.3",
+    "socket.io": "^4.5.2"
+  },
+  "devDependencies": {
+    "@types/node": "^18.14.1",
+    "typescript": "^4.9.5"
+  }
+}
