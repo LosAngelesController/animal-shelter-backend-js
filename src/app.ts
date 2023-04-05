@@ -12,7 +12,17 @@ import {pgclient} from './postgres'
 const app = express();
 app.use(cors());
 
-//import postgress client
+//connect postgress client
+async function main() {
+    await pgclient.connect()
+  
+    pgclient.on('end', (err, cli) => {
+      console.error('DATABASE CONNECTION ENDED. RETRYING IN 2 SECONDS...');
+      setTimeout(() => {
+        pgclient.connect();
+      }, 1000)
+     
+    })
 
 app.get('/', (req, res) => {
     res.send('Hello World!');
@@ -34,6 +44,7 @@ app.get('/alltables', [express.json()], async (req, res) => {
     res.send(result);
 })
 
+
 app.get('/time', async (req, res) => {
     //select from database current time
 
@@ -46,4 +57,8 @@ app.get('/time', async (req, res) => {
 app.listen(8080, () => {
     console.log('Server started on port 8080');
 }
-);
+)
+
+};
+
+main();

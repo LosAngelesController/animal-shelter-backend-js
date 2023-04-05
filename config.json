@@ -1,0 +1,10 @@
+{
+    "sheetId": "15o9Ko4LN169lXEISrTr9eIvD6KYOmllL44tkQCA4ZQs",
+   "db": {
+    "host": "localhost",
+    "port": "5432",
+    "database": "postgres",
+    "username": "postgres",
+    "password": "r$_^D9xxrefs0tRo"
+   }
+}
