@@ -3,17 +3,20 @@
         "animalpopulation": {
             "animal": "varchar",
             "month": "varchar",
-            "shelter": "varchar"
+            "shelter": "varchar",
+            "amount": "float8"
            
     },
     "dogswalked": {
         "month": "varchar",
-        "shelter": "varchar"
+        "shelter": "varchar",
+        "amount": "float8"
 },
 "outcomesforanimals": {
     "outcome": "varchar",
     "month": "varchar",
-    "shelter": "varchar"
+    "shelter": "varchar",
+    "amount": "float8"
 },
 "adoptions": {
     "month": "varchar",
